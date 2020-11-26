@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>タイトル:</strong>
+  <%= @board.title %>
+</p>
+
+<p>
+  <strong>内容:</strong>
+  <%= @board.contents %>
+</p>
+
+<p>
+  <strong>作成日時:</strong>
+  <%= l @board.created_at , format: :short %>
+</p>
+
+<%= link_to '編集', edit_board_path(@board) %> |
+<%= link_to '一覧へ', boards_path %>
